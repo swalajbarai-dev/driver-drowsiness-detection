@@ -1,0 +1,24 @@
+SYSTEM ARCHITECTURE
+
+[Webcam]
+    |
+    v
+[Frame Capture]
+    |
+    v
+[Face Detector]
+    |
+    v
+[Eye Detector]
+    |
+    v
+[Drowsiness Decision]
+    |             |
+    v             v
+ [Awake]       [Drowsy]
+                  |
+          +-------+-------+
+          |               |
+       [Alert]         [Logger]
+                          |
+                    [Statistics]

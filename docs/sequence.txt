@@ -1,0 +1,14 @@
+SEQUENCE
+
+Driver -> Main: Start
+Main -> Webcam: Capture frame
+Webcam -> Main: Frame
+Main -> FaceDetector: Detect face
+FaceDetector -> Main: Face coordinates
+Main -> FaceDetector: Detect eyes
+FaceDetector -> Main: Eye count
+Main -> DrowsinessDetector: Update eye state
+DrowsinessDetector -> Main: Status
+Main -> AlertManager: Alert if DROWSY
+Main -> SessionLogger: Save observation
+Main -> Webcam: Next frame

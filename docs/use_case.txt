@@ -1,0 +1,12 @@
+USE CASE
+
+Actor: Driver
+
+Driver --> Start Detection
+Driver --> Sit in front of webcam
+System --> Detect face
+System --> Detect eyes
+System --> Classify status
+System --> Trigger alert when drowsiness threshold is reached
+System --> Save session log
+Driver --> Stop detection

@@ -1,0 +1,35 @@
+WORKFLOW
+
+Start
+  |
+Initialize webcam and detectors
+  |
+Capture frame
+  |
+Detect face
+  |
+Face found?
+ /        \
+No         Yes
+|           |
+Reset     Detect eyes
+counter      |
+|        Count eyes
+|           |
+|       2 eyes?
+|       /      \
+|     Yes      No
+|      |        |
+|    Awake   Increment
+|             counter
+|                |
+|        Threshold reached?
+|          /          \
+|        No            Yes
+|        |              |
+|    Checking        Drowsy
+|                       |
+|                    Alert + Log
+ \________________________/
+             |
+          Next frame
